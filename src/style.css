@@ -1,0 +1,51 @@
+html {
+  /* 컨텐츠 영역 외 스크롤 방지 */
+  /* iOS 16 (Released 2022-09-12) */
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0; /* 브라우저 기본 속성 (margin: 8px) 을 제거 */
+}
+
+#app {
+  position: relative; /* 레이어를 겹쳐서 표한하기위해 부모는 상대적 위치 설정 */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Chrome, Safari, Opera에서 스크롤바 숨기기 */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* VUE 진입/진출 애니메이션 */
+.horizontal-slide-fade-enter-active,
+.horizontal-slide-fade-leave-active {
+  transition: transform 0.5s ease;
+}
+
+.horizontal-slide-fade-enter-from,
+.horizontal-slide-fade-leave-to {
+  transform: translateX(100vw);
+}
+
+.vertical-slide-fade-enter-active,
+.vertical-slide-fade-leave-active {
+  transition: transform 0.5s ease;
+}
+
+.vertical-slide-fade-enter-from,
+.vertical-slide-fade-leave-to {
+  transform: translateY(100vh);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
