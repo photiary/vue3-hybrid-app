@@ -49,7 +49,7 @@
   </div>
 
   <router-view name="fullLayer" v-slot="{ Component }">
-    <transition name="fade">
+    <transition name="horizontal-slide-fade">
       <component :is="Component" />
     </transition>
   </router-view>

@@ -12,6 +12,11 @@
     </a>
   </p>
   <button @click="router.replace('/c')">Replace C</button>
+
+  <h2>Pinia</h2>
+  <p>
+    {{ item.items }}
+  </p>
 </template>
 
 <script setup>
@@ -20,6 +25,9 @@ import router from "@/router/index.js";
 
 console.log('B: ', history)
 console.log('B: ', history.state)
+
+import {useItemStore } from "@/stores/item.js";
+const item = useItemStore();
 </script>
 
 <style scoped lang="scss">
